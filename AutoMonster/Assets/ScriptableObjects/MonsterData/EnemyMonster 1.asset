@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73bb5d409f06d3f478ef472f1df079f1, type: 3}
   m_Name: EnemyMonster 1
   m_EditorClassIdentifier: 
-  MonsterName: 
+  MonsterName: Blastoise
   Level: 0
-  CurrentHP: 0
-  MaxHP: 0
-  Attack: 0
-  Defense: 0
-  SpecialAttack: 0
-  SpecialDefense: 0
-  Speed: 0
-  AttackPower: 0
-  Type: Normal
-  art: {fileID: 0}
+  CurrentHP: 362
+  MaxHP: 362
+  Attack: 291
+  Defense: 328
+  SpecialAttack: 295
+  SpecialDefense: 339
+  Speed: 280
+  AttackPower: 90
+  Type: Water
+  art: {fileID: 21300000, guid: 963a92ae0bb47b54c9241c36e056f4f9, type: 3}

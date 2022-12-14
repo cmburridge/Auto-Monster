@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: TeamEnemy
   m_EditorClassIdentifier: 
   monsterList:
-  - {fileID: 11400000, guid: 6cf08e2a97e5f204b84cb32c19839236, type: 2}
   - {fileID: 11400000, guid: 06e3bbc5eadede144b245749f7d7087a, type: 2}
+  - {fileID: 11400000, guid: 6cf08e2a97e5f204b84cb32c19839236, type: 2}
   - {fileID: 11400000, guid: 06ed24e0d1988d443abc3481a22d2c80, type: 2}
   - {fileID: 11400000, guid: 1e85a74a4df3bf243bf32b06efb0b7d2, type: 2}
   - {fileID: 11400000, guid: 74bf6861a3b4a9b4c9b927cb3c20a8b6, type: 2}
