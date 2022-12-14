@@ -34,95 +34,28 @@ public class BattleManager : MonoBehaviour
 
     void Update()
     {
-        // check if it's the player's turn
-        if (turnCounter % 2 == 0)
+        int playerAttackValue = 0;
+        int enemyDefenseValue = 0;
+        int superEffectiveStatis = 0;
+        int randomValue = Random.Range(216, 255);
+        
+        if (currentPlayerMonster.Attack >= currentPlayerMonster.SpecialAttack)
         {
-            // get player's input for attack
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                if (currentPlayerMonster.Speed >= currentEnemyMonster.Speed)
-                {
-                    if (currentPlayerMonster.Attack >= currentPlayerMonster.SpecialAttack)
-                    {
-                        // calculate attack power of current player's monster
-                        var playerAttackPower = currentPlayerMonster.Attack;
+            playerAttackValue = currentPlayerMonster.Attack;
+            enemyDefenseValue = currentEnemyMonster.Defense;
 
-                        // calculate defense power of current enemy's monster
-                        var enemyDefensePower = currentEnemyMonster.Defense;
-
-                        // subtract attack power from enemy's monsters health
-                        currentEnemyMonster.CurrentHP -=
-                            playerAttackPower % enemyDefensePower * 2;
-                    }
-                    else if (currentPlayerMonster.Attack < currentPlayerMonster.SpecialAttack)
-                    {
-                        // calculate attack power of current player's monster
-                        var playerSPAttackPower = currentPlayerMonster.SpecialAttack;
-
-                        // calculate defense power of current enemy's monster
-                        var enemySPDefensePower = currentEnemyMonster.SpecialDefense;
-
-                        // subtract attack power from enemy's monsters health
-                        currentEnemyMonster.CurrentHP -=
-                            playerSPAttackPower % enemySPDefensePower * 2;
-                    }
-
-                    // check if enemy's monster is defeated
-                    if (currentEnemyMonster.CurrentHP <= 0)
-                    {
-                        // remove defeated monster from enemy's list
-                        enemyMonsters.Remove(currentEnemyMonster);
-
-                        // if there are more monsters in the enemy's list, select the next one as the current enemy's monster
-                        if (enemyMonsters.Capacity > 0)
-                        {
-                            currentEnemyMonster = enemyMonsters[0];
-                            enemyMonsterArt.GetComponent<SpriteRenderer>().sprite = currentEnemyMonster.art;
-                        }
-                    }
-                }
-                else if (currentPlayerMonster.Speed < currentEnemyMonster.Speed)
-                {
-                    if (currentEnemyMonster.Attack >= currentEnemyMonster.SpecialAttack)
-                    {
-                        // calculate attack power of current player's monster
-                        var enemyAttackPower = currentEnemyMonster.Attack;
-
-                        // calculate defense power of current enemy's monster
-                        var playerDefensePower = currentPlayerMonster.Defense;
-
-                        // subtract attack power from enemy's monsters health
-                        currentPlayerMonster.CurrentHP -=
-                            enemyAttackPower % playerDefensePower * 2;
-                    }
-                    else if (currentEnemyMonster.Attack < currentEnemyMonster.SpecialAttack)
-                    {
-                        // calculate attack power of current player's monster
-                        var enemySPAttackPower = currentEnemyMonster.SpecialAttack;
-
-                        // calculate defense power of current enemy's monster
-                        var playerSPDefensePower = currentPlayerMonster.SpecialDefense;
-
-                        // subtract attack power from enemy's monsters health
-                        currentPlayerMonster.CurrentHP -=
-                            enemySPAttackPower % playerSPDefensePower * 2;
-                    }
-
-                    // check if player's monster is defeated
-                    if (currentPlayerMonster.CurrentHP <= 0)
-                    {
-                        // remove defeated monster from player's list
-                        playerMonsters.Remove(currentPlayerMonster);
-
-                        // if there are more monsters in the player's list, select the next one as the current player's monster
-                        if (playerMonsters.Capacity > 0)
-                        {
-                            currentPlayerMonster = playerMonsters[0];
-                            playerMonsterArt.GetComponent<SpriteRenderer>().sprite = currentPlayerMonster.art;
-                        }
-                    }
-                }
-            }
+        }
+        else if (currentPlayerMonster.Attack <= currentPlayerMonster.SpecialAttack)
+        {
+            playerAttackValue = currentPlayerMonster.SpecialAttack;
+            enemyDefenseValue = currentEnemyMonster.SpecialDefense;
+        }
+        
+        // get player's input for attack
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+           int damagevalue = (((((2*currentPlayerMonster.Level/5+2)*(playerAttackValue*currentPlayerMonster.AttackPower/enemyDefenseValue)/50)+2)*20/10)*randomValue)/255;
+           Debug.Log(damagevalue);
         }
     }
 }

@@ -403,8 +403,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerMonsters:
   - {fileID: 11400000, guid: 21d7a77f5e431834285a690d89f97657, type: 2}
+  - {fileID: 11400000, guid: f4aebce3e5512b045bfe95b642eb047c, type: 2}
   enemyMonsters:
   - {fileID: 11400000, guid: f4aebce3e5512b045bfe95b642eb047c, type: 2}
+  - {fileID: 11400000, guid: 21d7a77f5e431834285a690d89f97657, type: 2}
   currentPlayerMonster: {fileID: 0}
   playerMonsterArt: {fileID: 505447440}
   currentEnemyMonster: {fileID: 0}
