@@ -105,7 +105,60 @@ public class TypeDictionary : MonoBehaviour
         typeEffectiveness.Add("Flying-Rock", 5);
         typeEffectiveness.Add("Flying-Steel", 5);
         //Psychic
-        typeEffectiveness.Add("Psychic-G", 5);
+        typeEffectiveness.Add("Psychic-Fighting", 20);
+        typeEffectiveness.Add("Psychic-Poison", 20);
+        typeEffectiveness.Add("Psychic-Psychic", 5);
+        typeEffectiveness.Add("Psychic-Dark", 0);
+        typeEffectiveness.Add("Psychic-Steel", 5);
+        //Bug
+        typeEffectiveness.Add("Bug-Fire", 5);
+        typeEffectiveness.Add("Bug-Grass", 20);
+        typeEffectiveness.Add("Bug-Fighting", 5);
+        typeEffectiveness.Add("Bug-Poison", 5);
+        typeEffectiveness.Add("Bug-Flying", 5);
+        typeEffectiveness.Add("Bug-Psychic", 20);
+        typeEffectiveness.Add("Bug-Ghost", 5);
+        typeEffectiveness.Add("Bug-Dark", 20);
+        typeEffectiveness.Add("Bug-Steel", 5);
+        typeEffectiveness.Add("Bug-Fairy", 5);
+        //Rock
+        typeEffectiveness.Add("Rock-Fire", 20);
+        typeEffectiveness.Add("Rock-Ice", 20);
+        typeEffectiveness.Add("Rock-Fighting", 5);
+        typeEffectiveness.Add("Rock-Ground", 5);
+        typeEffectiveness.Add("Rock-Flying", 20);
+        typeEffectiveness.Add("Rock-Bug", 20);
+        typeEffectiveness.Add("Rock-Steel", 5);
+        //Ghost
+        typeEffectiveness.Add("Ghost-Normal", 0);
+        typeEffectiveness.Add("Ghost-Psychic", 20);
+        typeEffectiveness.Add("Ghost-Ghost", 20);
+        typeEffectiveness.Add("Ghost-Dark", 5);
+        //Dragon
+        typeEffectiveness.Add("Dragon-Dragon", 20);
+        typeEffectiveness.Add("Dragon-Steel", 5);
+        typeEffectiveness.Add("Dragon-Fairy", 0);
+        //Dark
+        typeEffectiveness.Add("Dark-Fighting", 5);
+        typeEffectiveness.Add("Dark-Psychic", 20);
+        typeEffectiveness.Add("Dark-Ghost", 20);
+        typeEffectiveness.Add("Dark-Dark", 5);
+        typeEffectiveness.Add("Dark-Fairy", 5);
+        //Steel
+        typeEffectiveness.Add("Steel-Fire", 5);
+        typeEffectiveness.Add("Steel-Water", 5);
+        typeEffectiveness.Add("Steel-Electric", 5);
+        typeEffectiveness.Add("Steel-Ice", 20);
+        typeEffectiveness.Add("Steel-Rock", 20);
+        typeEffectiveness.Add("Steel-Steel", 5);
+        typeEffectiveness.Add("Steel-Fairy", 20);
+        //Fairy
+        typeEffectiveness.Add("Fairy-Fire", 5);
+        typeEffectiveness.Add("Fairy-Fighting", 20);
+        typeEffectiveness.Add("Fairy-Poison", 5);
+        typeEffectiveness.Add("Fairy-Dragon", 20);
+        typeEffectiveness.Add("Fairy-Dark", 20);
+        typeEffectiveness.Add("Fairy-Steel", 5);
     }
 
     private void Update()
