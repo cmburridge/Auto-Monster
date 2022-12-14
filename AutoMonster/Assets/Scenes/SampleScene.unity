@@ -382,6 +382,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1695301745}
   - component: {fileID: 1695301744}
+  - component: {fileID: 1695301746}
   m_Layer: 0
   m_Name: Battle Manager
   m_TagString: Untagged
@@ -402,16 +403,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMonsters:
-  - {fileID: 11400000, guid: 21d7a77f5e431834285a690d89f97657, type: 2}
-  - {fileID: 11400000, guid: f4aebce3e5512b045bfe95b642eb047c, type: 2}
+  - {fileID: 11400000, guid: 5ed970acbdf2ec640a362fdbe96e9a64, type: 2}
+  - {fileID: 11400000, guid: c11e41cda7aab1c4dbeae7403ac15911, type: 2}
+  - {fileID: 11400000, guid: 2547242e4fd05fa45b9b8595571bc231, type: 2}
+  - {fileID: 11400000, guid: 05c9c1e812818f8478a406b9e01de0cb, type: 2}
+  - {fileID: 11400000, guid: 9115777165c06c54bb0fce63e990fed0, type: 2}
+  - {fileID: 11400000, guid: cd9e26f64cac1384b88b7d78a3890282, type: 2}
   enemyMonsters:
-  - {fileID: 11400000, guid: f4aebce3e5512b045bfe95b642eb047c, type: 2}
-  - {fileID: 11400000, guid: 21d7a77f5e431834285a690d89f97657, type: 2}
+  - {fileID: 11400000, guid: c524bf6820ff62546ad1f0c1745e8520, type: 2}
+  - {fileID: 11400000, guid: 020bb760b0593b24ebe22e7f8232d061, type: 2}
+  - {fileID: 11400000, guid: cfe9371e9afbfe54fb3f8f7a4b84805d, type: 2}
+  - {fileID: 11400000, guid: be733fe170cd0974494abb34cd15ec2b, type: 2}
+  - {fileID: 11400000, guid: ade8a959e16aeee488cafbcf183900ca, type: 2}
+  - {fileID: 11400000, guid: 61fda547e5225504287459499f7478ba, type: 2}
   currentPlayerMonster: {fileID: 0}
   playerMonsterArt: {fileID: 505447440}
   currentEnemyMonster: {fileID: 0}
   enemyMonsterArt: {fileID: 895835375}
   turnCounter: 0
+  types: {fileID: 1695301746}
+  effectiveness: 10
 --- !u!4 &1695301745
 Transform:
   m_ObjectHideFlags: 0
@@ -426,3 +437,15 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1695301746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1695301743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 568917ff881b8c240956e4f50e373800, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

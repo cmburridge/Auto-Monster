@@ -7,20 +7,10 @@ using UnityEngine;
 public class TypeDictionary : MonoBehaviour
 {
     // Create a dictionary to store type effectiveness
-    Dictionary<string, int> typeEffectiveness = new Dictionary<string, int>();
+    public Dictionary<string, int> typeEffectiveness = new Dictionary<string, int>();
 
-    public int effectiveness = 10;
-
-    // Use the dictionary to look up the effectiveness of a move
-    public MonsterData playerMonster;
-    public MonsterData enemyMonster;
-
-    private BattleManager manager;
     private void Start()
     {
-        playerMonster = manager.currentPlayerMonster;
-        enemyMonster = manager.currentEnemyMonster;
-        
         //Normal
         typeEffectiveness.Add("Normal-Rock", 5);
         typeEffectiveness.Add("Normal-Ghost", 0);
@@ -159,21 +149,5 @@ public class TypeDictionary : MonoBehaviour
         typeEffectiveness.Add("Fairy-Dragon", 20);
         typeEffectiveness.Add("Fairy-Dark", 20);
         typeEffectiveness.Add("Fairy-Steel", 5);
-    }
-
-    private void Update()
-    {
-        playerMonster = manager.currentPlayerMonster;
-        enemyMonster = manager.currentEnemyMonster;
-    }
-
-    public void CheckEffectiveOnPlayer()
-    {
-        effectiveness = typeEffectiveness[enemyMonster.Type + "-" + playerMonster.Type];
-    }
-    
-    public void CheckEffectiveOnEnemy()
-    {
-        effectiveness = typeEffectiveness[playerMonster.Type + "-" + enemyMonster.Type];
     }
 }

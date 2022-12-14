@@ -23,6 +23,9 @@ public class BattleManager : MonoBehaviour
     // turn counter
     public int turnCounter = 0;
 
+    public TypeDictionary types;
+    public int effectiveness = 10;
+
     void Start()
     {
         // select the first monster from each list as the current monster
@@ -54,8 +57,20 @@ public class BattleManager : MonoBehaviour
         // get player's input for attack
         if (Input.GetKeyDown(KeyCode.Space))
         {
-           int damagevalue = (((((2*currentPlayerMonster.Level/5+2)*(playerAttackValue*currentPlayerMonster.AttackPower/enemyDefenseValue)/50)+2)*20/10)*randomValue)/255;
-           Debug.Log(damagevalue);
+            effectiveness = types.typeEffectiveness[currentPlayerMonster.Type + "-" + currentEnemyMonster.Type];
+            Debug.Log(currentPlayerMonster.Type + "-" + currentEnemyMonster.Type);
+            
+            if (effectiveness == 5)
+            {
+                Debug.Log("Not very effective");
+            }
+            else if (effectiveness == 20)
+            {
+                Debug.Log("Super Effective!");
+            }
+
+            int damagevalue = (((((2*currentPlayerMonster.Level/5+2)*(playerAttackValue*currentPlayerMonster.AttackPower/enemyDefenseValue)/50)+2)*effectiveness/10)*randomValue)/255;
+            Debug.Log(damagevalue);
         }
     }
 }
